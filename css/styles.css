@@ -22,6 +22,20 @@ nav ul li{
 .Promos a:hover{
     transform: scale(1.5);
 }
+
+@keyframes logo{
+	0%{
+        transform: translateY(0);
+}
+
+	25%{
+	transform: translateY(5px);
+}
+	75%{
+    transform: translateY(-5px);
+}
+}
+
 nav ul{
     display: flex;
     flex-direction: row;
@@ -36,6 +50,11 @@ nav ul li a{
 .logo{
     margin: 5px;
     width: 200px;
+    animation-name: logo;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+
 }
 nav{
     display: flex;
