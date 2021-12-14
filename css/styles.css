@@ -1,26 +1,16 @@
 *{
     margin: 0;
     padding: 0;
-}
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&family=Roboto:wght@300&display=swap');
-header{
-    display: flex;
-    background-color: #000;
-    justify-content: space-between;
-    padding: 0 30px 0 30px;
-    flex-direction: row;
-}
-nav ul li{
-    display: inline-block;
-
+    font-family: 'Oswald', sans-serif !important;
 }
 
-.Fabricacion a:hover{
-    transform: scale(1.2);
-}
-
-.Promos a:hover{
-    transform: scale(1.5);
+.logo{
+    margin: 5px;
+    width: 200px;
+    animation-name: logo;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
 }
 
 @keyframes logo{
@@ -36,50 +26,11 @@ nav ul li{
 }
 }
 
-nav ul{
-    display: flex;
-    flex-direction: row;
-}
-nav ul li a{
-    text-decoration: none;
-    color: white;
-    font-family: 'Outfit', sans-serif;
-    padding: 7px;
-    margin: 5px;
-}
-.logo{
-    margin: 5px;
-    width: 200px;
-    animation-name: logo;
-	animation-duration: 5s;
-	animation-iteration-count: infinite;
-	animation-timing-function: ease;
-
-}
-nav{
-    display: flex;
-    align-content: center;
-    flex-direction: row;
-}
-.lista{
-    display: flex;
-    align-items: center;
-}
-
 /*-----------INICIO---------------*/
 
 .Marca{
-    display: flex;
-    justify-content: space-around;
-    background-color: #000;
-    color: rgb(212, 152, 103);
-    font-family: 'Outfit', sans-serif;
-    font-size: 3em;
-    align-items: center;
-}
-.cerveza{
-    width: 30%;
-    transform: rotate(20deg);
+    
+    background-image: url(../images/fondoMarca.jpg);
 }
 
 .titulo{
@@ -89,96 +40,73 @@ nav{
     align-content: center;
     margin: 20px;
 }
-.cuerpo{
-    margin: 100px;
+
+
+.verMas{
+    margin: 0;
+}
+
+.texto{
+    font-size: 5em;
+}
+
+.Fabricacion, .Promos, .Marca{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
 }
 
 .Fabricacion{
-    margin-top: 50px;
-    background-color: black;
-    height: 20em;
-    font-family: 'Outfit', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-image: url(../images/fondoFabricacion.jpg);
+    
 }
 
 .Promos{
-    margin-top: 50px;
-    background-color: black;
-    height: 20em;
-    font-family: 'Outfit', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-image: url(../images/fondoPromos.jpg);
+    
 }
 .Fabricacion a, .Promos a{
     text-decoration: none;
-    font-size: 2.5em;
-    color: rgb(212, 152, 103);
+    color: #fff;
     transition: all .5s ease;
-    padding: 40px;
+    padding: 10px;
     text-align: center;
+    border:solid 2px  #fff;
+    border-radius:5px;
+    margin-top: 20px;
 }
+
+.Fabricacion a:hover, .Promos a:hover{
+    transform: scale(1.2);
+}
+
 footer{
     height: 100px;
-    background-color: black;
-    color: white;
+    background-color: #fff;
+    color: black;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    font-family: 'Outfit', sans-serif;
 }
-h2{
-    display: inline-block;
+.socialMedia{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
 }
 
 /*-------PRODUCTOS-------**/
 
-.Productos{
-    width: 100%;
-}
-.cuerpo--productos{
-    display: grid;
-    grid-template-columns: repeat(8, 2fr);
-    grid-template-rows: repeat(7,2fr);
-    grid-gap: 50px;
-}
-
-.producto1{
-    grid-column: 2/4;
-    width: 100%;
-    grid-row: 1/4;
-    height: 100%;
-   
-}
-.producto2{
-    grid-column: 6/8;
-    width: 100%;
-    grid-row: 1/4;
-    height: 100%;
-}
-.producto3{
-    grid-column: 2/4;
-    width: 100%;
-    grid-row: 5/8;
-    height: 100%;
-}
-.producto4{
-    grid-column: 6/8;
-    width: 100%;
-    grid-row: 5/8;
-    height: 100%;
-}
-.publicidad{
-    grid-column: 2/8;
-    grid-row: 4/5;
-    height: 100%;
-    background-color: black;
-    color: white;
-    font-size: 2em;
-    display: flex;
-    justify-content: center;
+.demasTitulos{
+    font-size: 3em;
+    text-align: center;
+    margin: 30px 0 0 0;
 }
 h3{
     margin: 20px;
@@ -192,12 +120,12 @@ h3{
     font-family: 'Outfit', sans-serif;
 
 }
-h1{
+/* .texto{
     font-family: 'Outfit', sans-serif;
     font-size: 4em;
     text-align: center;
     margin-top: 50px;
-}
+} */
 
 /*-----------NOSOTROS------------*/
 .info{
@@ -216,9 +144,6 @@ h1{
 
 /*--------MEDIA ------- */
 @media screen and (max-width:1197px){
-    .Marca, .Promos a, .Fabricacion a{
-        font-size: 2em;
-    }
     .cuerpo--productos{
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(5,1fr);
@@ -252,50 +177,35 @@ h1{
     h1{
         font-size: 3em;
     }
+    footer{
+        flex-direction: column;
+        height: 250px;
+    }
+    .socialMedia{
+        justify-content: center;
+    }
+    i{
+        margin: 0 20px 0 20px;
+    }
 }
 
-@media screen and (max-width:950px){
-    .Marca, .Promos a, .Fabricacion a{
-        font-size: 1.5em;
-    }
-    header{
-        flex-direction: column;
-        align-items: center;
-    }
-    nav ul li{
-        margin: 10px 0 10px 0;
-    }
-    .Promos, .Fabricacion{
-        height: 10em;
-    }
-}
 @media screen and (max-width:700px){
-    nav ul{
-        display: flex;
-        flex-direction: column;
-    }
-    .Marca, .Promos a, .Fabricacion a{
-        font-size: 1em;
-    }
-    .cuerpo{
-        margin:65px;
-    }
     .publicidad{
         font-size: 1em;
     }
+    .Marca, .Promos, .Fabricacion{
+        height: 40rem;
+    }
 }
 @media screen and (max-width:530px){
-    .Marca, .Promos a, .Fabricacion a{
-        font-size: 0.7em;
-    }
-    .Promos, .Fabricacion{
-        height: 7em;
-    }
     footer{
         font-size: 15px;
     }
 }
 @media screen and (max-width:447px){
+    .texto{
+        font-size: 4em;
+    }
     .producto1, .producto3{
         grid-column: 2/5;
     }
@@ -308,12 +218,6 @@ h1{
 }
 
 @media screen and (max-width:390px){
-    .cerveza{
-        display: none;
-    }
-    nav ul li a{
-        font-size: 13px;
-    }
     h3{
         font-size: 0.7em;
     }
