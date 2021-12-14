@@ -120,12 +120,7 @@ h3{
     font-family: 'Outfit', sans-serif;
 
 }
-/* .texto{
-    font-family: 'Outfit', sans-serif;
-    font-size: 4em;
-    text-align: center;
-    margin-top: 50px;
-} */
+
 
 /*-----------NOSOTROS------------*/
 .info{
@@ -133,10 +128,38 @@ h3{
     font-size: 1.5em;
     margin-top: 50px;
 }
+/*-----------CONTACTO------------*/
+.contacto{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(7,1fr);
+}
 
-
-
-
+.nombre{
+    grid-column: 2/4;
+    grid-row: 1/2;
+    width: 100%;
+}
+.apellido{
+    grid-column: 5/7;
+    grid-row: 1/2;
+}
+.telefono{
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+.email{
+    grid-column: 5/7;
+    grid-row: 2/3;
+}
+.consulta{
+    grid-column: 2/7;
+    grid-row: 3/4;
+}
+.enviar{
+    grid-column: 4/5;
+    grid-row: 4/5;
+}
 
 
 
